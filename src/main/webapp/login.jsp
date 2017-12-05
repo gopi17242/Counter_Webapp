@@ -10,10 +10,10 @@
     System.out.println("logs prints r working in console....!");
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
-    String epasss = tsf.epass;
+  /*  String epasss = tsf.epass;
 	Encrypt_Decrypt ed = new Encrypt_Decrypt();
 	ed.encriptAndDecript(epasss);
-    System.out.println("epasss======================="+epasss);
+    System.out.println("epasss======================="+epasss); */
     
     /*  Base64.Decoder decoder = Base64.getDecoder();
 cipher.init(Cipher.DECRYPT_MODE, aesKey);
