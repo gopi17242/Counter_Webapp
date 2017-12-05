@@ -1,4 +1,4 @@
-package com.javacodegeeks.controller;
+package com.salesforcetojava.controller;
 
 import org.springframework.stereotype.Controller;
 

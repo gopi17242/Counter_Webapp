@@ -1,4 +1,4 @@
-package com.javacodegeeks.controller;
+package com.salesforcetojava.controller;
 
 import com.sforce.soap.enterprise.Connector;
 import com.sforce.soap.enterprise.EnterpriseConnection;
