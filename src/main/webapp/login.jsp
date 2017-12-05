@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="com.salesforcetojava.controller.*"%>
+<%@ page import="org.apache.commons.codec.binary.*"%>
 
 <%
     String userName = request.getParameter("userName");    
