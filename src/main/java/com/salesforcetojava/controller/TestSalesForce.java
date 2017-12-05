@@ -47,7 +47,7 @@ import java.io.*;
 	
 
 
-public String decrypt(StringBuilder str,int key)
+public static String decrypt(StringBuilder str,int key)
   {
     for(int i=0; i<=(str.length() - 1); i++)
     {
