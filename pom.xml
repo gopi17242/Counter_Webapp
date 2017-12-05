@@ -9,8 +9,8 @@
   <url>http://maven.apache.org</url>
 	
 	<repository>
-    <id>project-common</id>
-    <name>Project Common</name>
+    <id>sf-enterpriser</id>
+    <name>sf-enterpriser</name>
     <url>https://raw.githubusercontent.com/gopi17242/mvn-repo/master/</url>
 </repository>
   <dependencies>
