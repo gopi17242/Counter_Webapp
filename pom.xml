@@ -9,8 +9,8 @@
   <url>http://maven.apache.org</url>
 	<repositories>
 	<repository>
-    <id>sf-enterpriser</id>
-    <name>sf-enterpriser</name>
+    <id>sf-enterprise</id>
+    <name>sf-enterprise</name>
     <url>https://raw.githubusercontent.com/gopi17242/mvn-repo/master/</url>
 </repository>
 		</repositories>
@@ -23,8 +23,8 @@
 		</dependency>
 	  
 	  <dependency>
-    <groupId>sf-enterpriser</groupId>
-    <artifactId>sf-enterpriser</artifactId>
+    <groupId>sf-enterprise</groupId>
+    <artifactId>sf-enterprise</artifactId>
     <version>0.0.1</version>
 </dependency>
 	  <!-- https://mvnrepository.com/artifact/com.force.api/force-wsc -->
