@@ -15,10 +15,10 @@
 	ed.encriptAndDecript(epasss):
     System.out.println("epasss======================="+epasss);
     
-    Base64.Decoder decoder = Base64.getDecoder();
+    /*  Base64.Decoder decoder = Base64.getDecoder();
 cipher.init(Cipher.DECRYPT_MODE, aesKey);
 String decrypted = new String(cipher.doFinal(decoder.decode(encryptedString)));
-System.out.println(decrypted);
+System.out.println(decrypted); */
     
     Class.forName("org.postgresql.Driver");
     Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.0.222:5432/test",
