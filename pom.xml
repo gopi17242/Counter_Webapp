@@ -37,6 +37,13 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>3.2.3.RELEASE</version>
 		</dependency>
+	  <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>9.3-1100-jdbc41</version>
+</dependency>
+
 
 	</dependencies>
 	<build>
