@@ -2,6 +2,7 @@
 <%
     String userName = request.getParameter("userName");    
     String password = request.getParameter("password");
+    System.out.println("logs prints r working in console....!");
     Class.forName("org.postgresql.Driver");
     Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.0.222:5432/test",
             "postgres", "gopinadh");
