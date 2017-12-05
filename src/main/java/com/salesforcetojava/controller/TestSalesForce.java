@@ -62,7 +62,7 @@ import com.sforce.ws.ConnectorConfig;
 	          for (int i=0;i<queryResultsc.getRecords().length;i++) {
 	            // cast the SObject to a strongly-typed Contact
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
-			  epass = c.c.getPassword__c();
+			  epass = c.getPassword__c();
 	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
 	                c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	          }
