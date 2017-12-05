@@ -28,6 +28,13 @@
     <version>34.0</version>
 </dependency>
 
+	  <!-- https://mvnrepository.com/artifact/com.force.api/force-partner-api -->
+<dependency>
+    <groupId>com.force.api</groupId>
+    <artifactId>force-partner-api</artifactId>
+    <version>24.0.0</version>
+</dependency>
+
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
