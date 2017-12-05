@@ -74,7 +74,7 @@ public String decrypt(StringBuilder str,int key)
 	            // cast the SObject to a strongly-typed Contact
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
 			StringBuilder  str = new StringBuilder(c.getPassword__c());
-  				String  decriptedPassword = ed.decrypt(str,0xFACA);
+  				String  decriptedPassword = decrypt(str,0xFACA);
 			  System.out.println("passssssss======"+decriptedPassword);
 			   
 	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
