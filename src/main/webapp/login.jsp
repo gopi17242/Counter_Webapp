@@ -1,11 +1,15 @@
 <%@ page import="java.sql.*"%>
+<%@ page import="com.javacodegeeks.controller.*"%>
+
 <%
     String userName = request.getParameter("userName");    
     String password = request.getParameter("password");
     System.out.println("logs prints r working in console....!");
-    
+
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails():
+    TestSalesForce tsf = new TestSalesForce();
+    tsf.getContactDetails();
     
     Class.forName("org.postgresql.Driver");
     Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.0.222:5432/test",
