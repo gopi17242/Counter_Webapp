@@ -44,7 +44,7 @@ import java.io.*;
 
 	  }
 
-		}
+	
 
 
 public String decrypt(StringBuilder str,int key)
