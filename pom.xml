@@ -11,7 +11,7 @@
 	<repository>
     <id>project-common</id>
     <name>Project Common</name>
-    <url>https://github.com/gopi17242/mvn-repo/raw/master/</url>
+    <url>https://raw.githubusercontent.com/gopi17242/mvn-repo/master/</url>
 </repository>
   <dependencies>
 		<dependency>
