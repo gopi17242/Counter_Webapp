@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*"%>
-<%@ page import="com.salesforcetojava.controller.TestSalesForce"%>
+<%@ page import="com.salesforcetojava.controller.*"%>
 
 <%
     String userName = request.getParameter("userName");    
