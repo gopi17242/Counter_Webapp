@@ -12,6 +12,7 @@ import com.sforce.ws.ConnectorConfig;
 	public class TestSalesForce {
 	static final String USERNAME = "gopinadh17242@gmail.com";
 	static final String PASSWORD = "vertex123GtfHm6lSrYmoEoA8NU6FzhBY";
+	static String epass = "";
 	  static EnterpriseConnection connection;
 
 	  public static void getContactDetails() {
@@ -61,6 +62,7 @@ import com.sforce.ws.ConnectorConfig;
 	          for (int i=0;i<queryResultsc.getRecords().length;i++) {
 	            // cast the SObject to a strongly-typed Contact
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
+			  epass = c.c.getPassword__c();
 	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
 	                c.getLastName()+" - Account: "+c.getAccount().getName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	          }
