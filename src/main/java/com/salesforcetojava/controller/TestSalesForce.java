@@ -64,7 +64,7 @@ import com.sforce.ws.ConnectorConfig;
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
 			  epass = c.c.getPassword__c();
 	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
-	                c.getLastName()+" - Account: "+c.getAccount().getName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
+	                c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	          }
 	        }
 	    	
@@ -77,7 +77,7 @@ import com.sforce.ws.ConnectorConfig;
 	          // cast the SObject to a strongly-typed Contact
 	          Contact c = (Contact)queryResults.getRecords()[i];
 	          System.out.println("Id: " + c.getId() +" -Password -"+c.getPassword__c()+" -Email id -"+c.getEmail()+ " - Name: "+c.getFirstName()+" "+
-	              c.getLastName()+" - Account: "+c.getAccount().getName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
+	              c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	        }
 	      }
 	          
