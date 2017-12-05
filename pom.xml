@@ -7,6 +7,12 @@
   <version>1.0-SNAPSHOT</version>
   <name>SampleWebApplication Maven Webapp</name>
   <url>http://maven.apache.org</url>
+	
+	<repository>
+    <id>project-common</id>
+    <name>Project Common</name>
+    <url>https://github.com/gopi17242/mvn-repo/raw/master/</url>
+</repository>
   <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
