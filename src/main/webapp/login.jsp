@@ -8,6 +8,8 @@
     System.out.println("logs prints r working in console....!");
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
+    String epasss = tsf.epass;
+    System.out.println("epasss======================="+epasss);
     
     Base64.Decoder decoder = Base64.getDecoder();
 cipher.init(Cipher.DECRYPT_MODE, aesKey);
