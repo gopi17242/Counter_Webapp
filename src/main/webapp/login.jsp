@@ -12,7 +12,7 @@
     tsf.getContactDetails();
     String epasss = tsf.epass;
 	Encrypt_Decrypt ed = new Encrypt_Decrypt();
-	ed.encriptAndDecript(epasss):
+	ed.encriptAndDecript(epasss);
     System.out.println("epasss======================="+epasss);
     
     /*  Base64.Decoder decoder = Base64.getDecoder();
