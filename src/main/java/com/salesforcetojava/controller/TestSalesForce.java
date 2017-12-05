@@ -8,7 +8,7 @@ import com.sforce.soap.enterprise.sobject.Account;
 import com.sforce.soap.enterprise.sobject.Contact;
 import com.sforce.ws.ConnectionException;
 import com.sforce.ws.ConnectorConfig;
-
+import java.io.*;
 	public class TestSalesForce {
 	static final String USERNAME = "gopinadh17242@gmail.com";
 	static final String PASSWORD = "vertex123GtfHm6lSrYmoEoA8NU6FzhBY";
@@ -45,6 +45,19 @@ import com.sforce.ws.ConnectorConfig;
 
 	  }
 
+
+public String decrypt(StringBuilder str,int key)
+  {
+    for(int i=0; i<=(str.length() - 1); i++)
+    {
+      char c = (char)(str.charAt(i) + key);
+      str.setCharAt(i,c);
+    }
+    return new String(str);
+  }
+    	
+			
+		}
 	  // queries and displays the 5 newest contacts
 	  private static void queryContacts() {
 	  
@@ -62,7 +75,10 @@ import com.sforce.ws.ConnectorConfig;
 	          for (int i=0;i<queryResultsc.getRecords().length;i++) {
 	            // cast the SObject to a strongly-typed Contact
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
-			  epass = c.getPassword__c();
+			
+			   StringBuilder  str = new StringBuilder(c.getPassword__c());
+  				String  decriptedPassword = ed.decrypt(str,0xFACA);
+			  System.out.println("passssssss======"+decriptedPassword);
 	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
 	                c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	          }
