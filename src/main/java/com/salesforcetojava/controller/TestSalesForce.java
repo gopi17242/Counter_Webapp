@@ -38,12 +38,13 @@ import java.io.*;
 	  //    updateAccounts();
 	  //    deleteAccounts();
 	    
-	    
 	    } catch (ConnectionException e1) {
 	        e1.printStackTrace();
 	    } 
 
 	  }
+
+		}
 
 
 public String decrypt(StringBuilder str,int key)
@@ -55,9 +56,6 @@ public String decrypt(StringBuilder str,int key)
     }
     return new String(str);
   }
-    	
-			
-		}
 	  // queries and displays the 5 newest contacts
 	  private static void queryContacts() {
 	  
