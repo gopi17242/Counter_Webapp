@@ -57,7 +57,7 @@ import com.sforce.ws.ConnectorConfig;
 	    	
 	    	  // query for the 5 newest contacts     
 	        QueryResult queryResultsc = connection.query("SELECT Id, Email, Password__c, FirstName, LastName, Account.Name " +
-	          "FROM Contact WHERE Id = '0037F00000IF4D7QAL'");
+	          "FROM Contact WHERE Id = '0037F00000IL4nFQAT'");
 	        if (queryResultsc.getSize() > 0) {
 	          for (int i=0;i<queryResultsc.getRecords().length;i++) {
 	            // cast the SObject to a strongly-typed Contact
@@ -69,7 +69,7 @@ import com.sforce.ws.ConnectorConfig;
 	        }
 	    	
 	      
-	    // query for the 5 newest contacts     
+	/*    // query for the 5 newest contacts     
 	      QueryResult queryResults = connection.query("SELECT Id, Email, Password__c, Phone,Title, FirstName, LastName, Account.Name " +
 	        "FROM Contact WHERE AccountId != NULL ORDER BY CreatedDate DESC LIMIT 5");
 	      if (queryResults.getSize() > 0) {
@@ -80,7 +80,7 @@ import com.sforce.ws.ConnectorConfig;
 	              c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	        }
 	      }
-	          
+	          */
 	      /*    // query for the 5 newest contacts     
 	          QueryResult queryResults = connection.query("SELECT id , Name, Type  " +
 	            "FROM Account");
