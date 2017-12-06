@@ -15,7 +15,7 @@
     
     if (isUserExisted) {
         session.setAttribute("userid", userName);
-        response.sendRedirect("register.jsp");
+        response.sendRedirect("contacts.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
     }
