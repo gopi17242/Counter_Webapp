@@ -44,7 +44,7 @@ out.print("</table><center>");
 %>
 <style>
 body {
-	color:#6f0d0d;
+	color:#4c0775;
 	background: darkgray;
 	}
 </style>
