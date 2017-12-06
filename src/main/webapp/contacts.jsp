@@ -2,6 +2,12 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="com.salesforcetojava.controller.*"%>
 <%
+System.out.println("session====================="+session.getAttribute("username"));
+if(session.getAttribute("username") == null){
+
+ response.sendRedirect("index.jsp");
+
+}
 
 String spageid=request.getParameter("page");  
 spageid = "1";
