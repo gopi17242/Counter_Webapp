@@ -45,6 +45,27 @@ import com.salesforcetojava.controller.Contacts;
 	    } 
 
 	  }
+		
+public boolean validateUser(String userid) throws ConnectionException {
+
+		boolean isExist = false;
+		//////////////
+		System.out.println("====================getContactsList===========================");
+		// query for the 5 newest contacts     
+		QueryResult queryResultsc = connection.query("SELECT Id, Email, Password__c, FirstName, LastName, Phone, Title, Account.Name " +
+				"FROM Contact WHERE Email ='"+userid+"'");
+		if (queryResultsc.getSize() > 0) {
+
+			isExist = true;
+
+		}
+
+		return isExist;
+
+
+
+
+	}
 
 	public static List<Contacts> getContactsList() throws ConnectionException{
 	  
