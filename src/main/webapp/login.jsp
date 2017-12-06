@@ -7,7 +7,7 @@
 <%
     String username = request.getParameter("username");    
     String password = request.getParameter("password");
-    System.out.println("logs prints r working in console....!"+userName+"===="+password);
+    System.out.println("logs prints r working in console....!"+username+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     tsf.getContactsList();
