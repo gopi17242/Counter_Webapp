@@ -4,6 +4,7 @@
 <%
 
 String spageid=request.getParameter("page");  
+spageid = "1";
 int pageid=Integer.parseInt(spageid);  
 int total=5;  
 if(pageid==1){}  
