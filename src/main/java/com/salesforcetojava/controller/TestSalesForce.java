@@ -72,7 +72,11 @@ import java.io.*;
           contactsList.add(contacts);
           
         }
+	      
+	      
       }
+		
+		 System.out.println("contactsList===="+contactsList.size());
 	return contactsList;
       
       //////////////
