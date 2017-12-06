@@ -36,7 +36,7 @@
                         <td><input type="password" name="password" value="" /></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Submit" /></td>
+                        <td>  </td><!-- <input type="submit" value="Submit" /> -->
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>
