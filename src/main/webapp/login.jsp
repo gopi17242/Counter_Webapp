@@ -5,9 +5,9 @@
 
 
 <%
-    String userName = request.getParameter("userName");    
+    String userName = request.getParameter("username");    
     String password = request.getParameter("password");
-    System.out.println("logs prints r working in console....!");
+    System.out.println("logs prints r working in console....!"+userName+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
   /*  String epasss = tsf.epass;
