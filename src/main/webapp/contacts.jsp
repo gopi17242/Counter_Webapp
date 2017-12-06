@@ -39,6 +39,7 @@ out.print("</table><center>");
 <style>
 body {
 	color:red;
+	background: darkgray;
 	}
 </style>
 
