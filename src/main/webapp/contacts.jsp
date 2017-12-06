@@ -36,6 +36,12 @@ for(Contacts e:contactsList){
 }
 out.print("</table><center>");
 %>
+<style>
+body {
+	color:red;
+	}
+</style>
+
 <a href="contacts.jsp?page=1">1</a>
 <a href="contacts.jsp?page=2">2</a>
 <a href="contacts.jsp?page=3">3</a>
