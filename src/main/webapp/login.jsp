@@ -21,7 +21,7 @@ cipher.init(Cipher.DECRYPT_MODE, aesKey);
 String decrypted = new String(cipher.doFinal(decoder.decode(encryptedString)));
 System.out.println(decrypted); */
     
-    Class.forName("org.postgresql.Driver");
+   /*  Class.forName("org.postgresql.Driver");
     Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.0.222:5432/test",
             "postgres", "gopinadh");
     Statement st = con.createStatement();
@@ -33,4 +33,5 @@ System.out.println(decrypted); */
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
     }
+     */
 %>
