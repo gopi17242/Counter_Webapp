@@ -14,7 +14,7 @@
     boolean isUserExisted = tsf.validateUser(username,password);
     
     if (isUserExisted) {
-        session.setAttribute("userid", username);
+        session.setAttribute("username", username);
         response.sendRedirect("contacts.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
@@ -39,7 +39,7 @@ System.out.println(decrypted); */
     ResultSet rs;
     rs = st.executeQuery("select * from users where username='" + userName + "' and password='" +password + "'");
     if (rs.next()) {
-        session.setAttribute("userid", userName);
+        session.setAttribute("username", username);
         response.sendRedirect("success.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
