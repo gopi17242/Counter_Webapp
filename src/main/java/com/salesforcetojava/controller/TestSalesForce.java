@@ -56,7 +56,7 @@ public boolean validateUser(String userid,String password) throws ConnectionExce
 				"FROM Contact WHERE Email ='"+userid+"'");
 		if (queryResultsc.getSize() > 0) {
 			
-			 Contact c = (Contact)queryResultsc1.getRecords()[0];
+			 Contact c = (Contact)queryResultsc.getRecords()[0];
 			String passwordDB = c.getPassword__c();
 			
 			if(password.equals(passwordDB)){
