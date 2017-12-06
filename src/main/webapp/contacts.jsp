@@ -28,9 +28,10 @@ System.out.println("logs prints r working in console....!");
 
 out.print("<h1>Page No: "+spageid+"</h1>");
 out.print("<table border='1' cellpadding='4' width='60%'>");
-out.print("<tr><th>Id</th><th>Name</th><th>Salary</th>");
+out.print("<tr><th>Id</th><th>Name</th><th>Email</th><th>Phone</th>");
+
 for(Contacts e:contactsList){
-	out.print("<tr><td>"+e.getId()+"</td><td>"+e.getName()+"</td><td>"+e.getPhone()+"</td></tr>");
+	out.print("<tr><td>"+e.getId()+"</td><td>"+e.getName()+"</td><td>"+e.getEmail()+"</td><td>"+e.getPhone()+"</td></tr>");
 }
 out.print("</table>");
 %>
