@@ -27,7 +27,7 @@ System.out.println("logs prints r working in console....!");
     } */
 
 //out.print("<center><h1>Page No: "+spageid+"</h1></center>");
-out.print("<center><h1>Contact Details</h1></center>");
+out.print("<center><h1>Contact Details</h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><a href="index.jsp">Login</a></b></center>");
 out.print("<center><table border='1' cellpadding='4' width='60%'>");
 out.print("<tr><th>Id</th><th>Name</th><th>Email</th><th>Phone</th>");
 
