@@ -11,7 +11,7 @@
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     tsf.getContactsList();
-    boolean isUserExisted = tsf.validateUser(userName);
+    boolean isUserExisted = tsf.validateUser(userName,password);
     
     if (isUserExisted) {
         session.setAttribute("userid", userName);
