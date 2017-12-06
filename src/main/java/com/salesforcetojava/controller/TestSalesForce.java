@@ -44,7 +44,7 @@ import java.io.*;
 
 	  }
 
-	public static List<Contacts> getContactsList(String query) throws ConnectionException{
+	public static List<Contacts> getContactsList() throws ConnectionException{
 	  
 	  
 	  //////////////
