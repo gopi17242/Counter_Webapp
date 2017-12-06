@@ -5,16 +5,16 @@
 
 
 <%
-    String userName = request.getParameter("username");    
+    String username = request.getParameter("username");    
     String password = request.getParameter("password");
     System.out.println("logs prints r working in console....!"+userName+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     tsf.getContactsList();
-    boolean isUserExisted = tsf.validateUser(userName,password);
+    boolean isUserExisted = tsf.validateUser(username,password);
     
     if (isUserExisted) {
-        session.setAttribute("userid", userName);
+        session.setAttribute("userid", username);
         response.sendRedirect("contacts.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
