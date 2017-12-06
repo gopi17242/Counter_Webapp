@@ -12,7 +12,7 @@ else{
     pageid=pageid*total+1;  
 }  
 
-System.out.println("logs prints r working in console....!"+username+"===="+password);
+System.out.println("logs prints r working in console....!");
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     List<Contacts> contactsList = tsf.getContactsList();
