@@ -10,6 +10,7 @@
     System.out.println("logs prints r working in console....!"+userName+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
+    tsf.getContactsList();
   /*  String epasss = tsf.epass;
 	Encrypt_Decrypt ed = new Encrypt_Decrypt();
 	ed.encriptAndDecript(epasss);
