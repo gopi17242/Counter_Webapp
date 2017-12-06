@@ -1,4 +1,4 @@
-package com.sforce.soap.client;
+package com.salesforcetojava.controller;
 
 public class Contacts {
 	
