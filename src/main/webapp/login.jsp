@@ -5,20 +5,21 @@
 
 
 <%
-    String userName = request.getParameter("userName");    
+    String userName = request.getParameter("username");    
     String password = request.getParameter("password");
-    System.out.println("logs prints r working in console....!");
+    System.out.println("logs prints r working in console....!"+userName+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
-    String epasss = tsf.epass;
+    tsf.getContactsList();
+  /*  String epasss = tsf.epass;
 	Encrypt_Decrypt ed = new Encrypt_Decrypt();
-	ed.encriptAndDecript(epasss):
-    System.out.println("epasss======================="+epasss);
+	ed.encriptAndDecript(epasss);
+    System.out.println("epasss======================="+epasss); */
     
-    Base64.Decoder decoder = Base64.getDecoder();
+    /*  Base64.Decoder decoder = Base64.getDecoder();
 cipher.init(Cipher.DECRYPT_MODE, aesKey);
 String decrypted = new String(cipher.doFinal(decoder.decode(encryptedString)));
-System.out.println(decrypted);
+System.out.println(decrypted); */
     
     Class.forName("org.postgresql.Driver");
     Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.0.222:5432/test",

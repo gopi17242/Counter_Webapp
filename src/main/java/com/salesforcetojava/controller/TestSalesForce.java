@@ -8,11 +8,11 @@ import com.sforce.soap.enterprise.sobject.Account;
 import com.sforce.soap.enterprise.sobject.Contact;
 import com.sforce.ws.ConnectionException;
 import com.sforce.ws.ConnectorConfig;
-
+import java.io.*;
 	public class TestSalesForce {
 	static final String USERNAME = "gopinadh17242@gmail.com";
 	static final String PASSWORD = "vertex123GtfHm6lSrYmoEoA8NU6FzhBY";
-	static String epass = "";
+	
 	  static EnterpriseConnection connection;
 
 	  public static void getContactDetails() {
@@ -38,13 +38,62 @@ import com.sforce.ws.ConnectorConfig;
 	  //    updateAccounts();
 	  //    deleteAccounts();
 	    
-	    
 	    } catch (ConnectionException e1) {
 	        e1.printStackTrace();
 	    } 
 
 	  }
 
+	public static List<Contacts> getContactsList() throws ConnectionException{
+	  
+	  
+	  //////////////
+      System.out.println("===============================================");
+      // query for the 5 newest contacts     
+      QueryResult queryResultsc1 = connection.query("SELECT Id, Email, Password__c, FirstName, LastName, Phone, Title, Account.Name " +
+        "FROM Contact ");
+      
+      List<Contacts> contactsList = new ArrayList<Contacts>();
+      
+      if (queryResultsc1.getSize() > 0) {
+        for (int i1=0;i1<queryResultsc1.getRecords().length;i1++) {
+          // cast the SObject to a strongly-typed Contact
+          Contact c1 = (Contact)queryResultsc1.getRecords()[i1];
+          System.out.println("Id: " + c1.getId() +" -Email id -"+c1.getEmail()+ " - Name: "+c1.getFirstName()+" "+
+              c1.getLastName()+" - Phone: "+c1.getPhone()+" - Title: "+c1.getTitle());
+          
+          Contacts contacts = new Contacts();
+          contacts.setId(c1.getId());
+          contacts.setEmail(c1.getEmail());
+          contacts.setFirstName(c1.getFirstName());
+          contacts.setName(c1.getFirstName());
+          contacts.setTitle(c1.getTitle());
+          contacts.setPhone(c1.getPhone());
+          contactsList.add(contacts);
+          
+        }
+	      
+	      
+      }
+		
+		 System.out.println("contactsList===="+contactsList.size());
+	return contactsList;
+      
+      //////////////
+	  
+  }
+  
+
+
+public static String decrypt(StringBuilder str,int key)
+  {
+    for(int i=0; i<=(str.length() - 1); i++)
+    {
+      char c = (char)(str.charAt(i) + key);
+      str.setCharAt(i,c);
+    }
+    return new String(str);
+  }
 	  // queries and displays the 5 newest contacts
 	  private static void queryContacts() {
 	  
@@ -57,19 +106,22 @@ import com.sforce.ws.ConnectorConfig;
 	    	
 	    	  // query for the 5 newest contacts     
 	        QueryResult queryResultsc = connection.query("SELECT Id, Email, Password__c, FirstName, LastName, Account.Name " +
-	          "FROM Contact WHERE Id = '0037F00000IF4D7QAL'");
+	          "FROM Contact WHERE Id = '0037F00000IL4nFQAT'");
 	        if (queryResultsc.getSize() > 0) {
 	          for (int i=0;i<queryResultsc.getRecords().length;i++) {
 	            // cast the SObject to a strongly-typed Contact
 	            Contact c = (Contact)queryResultsc.getRecords()[i];
-			  epass = c.c.getPassword__c();
-	            System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
-	                c.getLastName()+" - Account: "+c.getAccount().getName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
+		//	StringBuilder  str = new StringBuilder(c.getPassword__c());
+  		//		String  decriptedPassword = decrypt(str,0xFACA);
+		//	  System.out.println("passssssss======"+decriptedPassword);
+			   
+	    //        System.out.println("Id: " + c.getId() +" -Email id -"+c.getEmail()+" -Password -"+c.getPassword__c()+ " - Name: "+c.getFirstName()+" "+
+	    //            c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	          }
 	        }
 	    	
 	      
-	    // query for the 5 newest contacts     
+	/*    // query for the 5 newest contacts     
 	      QueryResult queryResults = connection.query("SELECT Id, Email, Password__c, Phone,Title, FirstName, LastName, Account.Name " +
 	        "FROM Contact WHERE AccountId != NULL ORDER BY CreatedDate DESC LIMIT 5");
 	      if (queryResults.getSize() > 0) {
@@ -77,10 +129,10 @@ import com.sforce.ws.ConnectorConfig;
 	          // cast the SObject to a strongly-typed Contact
 	          Contact c = (Contact)queryResults.getRecords()[i];
 	          System.out.println("Id: " + c.getId() +" -Password -"+c.getPassword__c()+" -Email id -"+c.getEmail()+ " - Name: "+c.getFirstName()+" "+
-	              c.getLastName()+" - Account: "+c.getAccount().getName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
+	              c.getLastName()+" - Phone: "+c.getPhone()+" - Title: "+c.getTitle());
 	        }
 	      }
-	          
+	          */
 	      /*    // query for the 5 newest contacts     
 	          QueryResult queryResults = connection.query("SELECT id , Name, Type  " +
 	            "FROM Account");
