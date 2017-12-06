@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Java with Heroku Example</title>
+        <title>Java with Heroku</title>
     </head>
     <body bgcolor="silver">
         <form method="post" action="login.jsp">
