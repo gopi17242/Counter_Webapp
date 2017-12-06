@@ -44,7 +44,41 @@ import java.io.*;
 
 	  }
 
-	
+	public static List<Contacts> getContactsList(String query) throws ConnectionException{
+	  
+	  
+	  //////////////
+      System.out.println("===============================================");
+      // query for the 5 newest contacts     
+      QueryResult queryResultsc1 = connection.query("SELECT Id, Email, Password__c, FirstName, LastName, Phone, Title, Account.Name " +
+        "FROM Contact ");
+      
+      List<Contacts> contactsList = new ArrayList<Contacts>();
+      
+      if (queryResultsc1.getSize() > 0) {
+        for (int i1=0;i1<queryResultsc1.getRecords().length;i1++) {
+          // cast the SObject to a strongly-typed Contact
+          Contact c1 = (Contact)queryResultsc1.getRecords()[i1];
+          System.out.println("Id: " + c1.getId() +" -Email id -"+c1.getEmail()+ " - Name: "+c1.getFirstName()+" "+
+              c1.getLastName()+" - Phone: "+c1.getPhone()+" - Title: "+c1.getTitle());
+          
+          Contacts contacts = new Contacts();
+          contacts.setId(c1.getId());
+          contacts.setEmail(c1.getEmail());
+          contacts.setFirstName(c1.getFirstName());
+          contacts.setName(c1.getFirstName());
+          contacts.setTitle(c1.getTitle());
+          contacts.setPhone(c1.getPhone());
+          contactsList.add(contacts);
+          
+        }
+      }
+	return contactsList;
+      
+      //////////////
+	  
+  }
+  
 
 
 public static String decrypt(StringBuilder str,int key)
