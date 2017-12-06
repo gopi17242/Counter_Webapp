@@ -11,6 +11,16 @@
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     tsf.getContactsList();
+    boolean isUserExisted = tsf.validateUser(userName);
+    
+    if (isUserExisted) {
+        session.setAttribute("userid", userName);
+        response.sendRedirect("register.jsp");
+    } else {
+        out.println("Invalid password <a href='index.jsp'>try again</a>");
+    }
+    
+    
   /*  String epasss = tsf.epass;
 	Encrypt_Decrypt ed = new Encrypt_Decrypt();
 	ed.encriptAndDecript(epasss);
