@@ -12,14 +12,14 @@ else{
     pageid=pageid*total+1;  
 }  
 
-System.out.println("logs prints r working in console....!"+userName+"===="+password);
+System.out.println("logs prints r working in console....!"+username+"===="+password);
     TestSalesForce tsf = new TestSalesForce();
     tsf.getContactDetails();
     List<Contacts> contactsList = tsf.getContactsList();
- //   boolean isUserExisted = tsf.validateUser(userName);
+ //   boolean isUserExisted = tsf.validateUser(username);
     
  /*   if (isUserExisted) {
-        session.setAttribute("userid", userName);
+        session.setAttribute("userid", username);
         response.sendRedirect("contacts.jsp");
     } else {
         out.println("Invalid password <a href='index.jsp'>try again</a>");
